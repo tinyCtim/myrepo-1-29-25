@@ -1,8 +1,9 @@
 
 ~ raise b to the e power
 
-2 b :
-3 e : 
+4 b :
+"!enter exponent " ? e : "!"
+~ 3 e : 
 
 ~ call the E macro
 
@@ -16,9 +17,7 @@ A. !
 ~ define the E macro
 
 $E
-
 ~ A is a global
-
 1 A :
 1% b :
 2% e :
@@ -34,4 +33,3 @@ e. 1 -  e :
 )
 
 @
-
