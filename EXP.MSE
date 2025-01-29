@@ -8,8 +8,6 @@
 
 #E,b.,e.;
 
-~ A is a global
-
 ~ print the answer followed by a new line 
 
 A. !
@@ -18,6 +16,9 @@ A. !
 ~ define the E macro
 
 $E
+
+~ A is a global
+
 1 A :
 1% b :
 2% e :
