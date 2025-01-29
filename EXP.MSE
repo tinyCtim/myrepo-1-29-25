@@ -1,0 +1,35 @@
+
+~ raise b to the e power
+
+2 b :
+3 e : 
+
+~ call the E macro
+
+#E,b.,e.;
+
+~ A is a global
+
+~ print the answer followed by a new line 
+
+A. !
+"!"
+
+~ define the E macro
+
+$E
+1 A :
+1% b :
+2% e :
+
+~ main loop
+
+(
+e. 0 > ^
+A. b. * 
+A :
+~ decrement e
+e. 1 -  e :
+)
+
+@
