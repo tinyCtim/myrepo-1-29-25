@@ -1,6 +1,6 @@
 
 echo
-echo nzcom 10/21/17
+echo nzcom 1/29/25
 echo
 d tracks[0-7] 254
 attach dsk0 nzcoma.dsk
