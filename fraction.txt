@@ -1,0 +1,56 @@
+#include pps/lrblib.tc
+#include pps/library.tc
+
+// note: the #includes must be the very first things in a tiny-c program
+
+main [
+dpf 1411,1440,18
+]
+
+[
+What is one sixteenth + one eighth + two fifths + one thirty-second +
+one quarter + one ninth?
+
+I want the answer expressed as a reduced fraction.
+]
+
+[
+It can be shown (convert all the fractions to use the the lowest common
+denominator) that the sum of these fractions is
+
+1411/1440
+
+This fraction is not reducible. 
+
+1 - 1411/1440 can be computed in a variety of ways. Here's one:
+
+C:\Users\00076194\OneDrive - CSCU\Documents\GitHub\myrepo>python
+
+Python 3.12.8 (tags/v3.12.8:2dc476b, Dec  3 2024, 19:30:04) [MSC v.1942 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+
+>>> 1 - 1411/1440
+0.02013888888888893
+>>>
+
+If you round this to 5 decimal digits you get 0.02014
+
+]
+
+// .979861111111111111
+
+/*
+motivated by I am Not Sidney Poitier on 1/20/25 - MLK - "day 1"
+
+On page 133 we read 
+
+“Hmmph. Young man, let me just say this, I’m one-sixteenth black, an
+eighth Irish, two-fifths Choctaw, one-thirty-second Dutch, a quarter
+English, and a ninth German.” I didn’t, nor did I want to, do the math,
+but it was clear that he was ten-tenths crazy.
+
+For the math inclined, how far from 1 is the sum of these fractions?
+
+To at least 5 decimal places.  ??
+*/
+

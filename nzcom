@@ -1,0 +1,21 @@
+
+echo
+echo nzcom 10/21/17
+echo
+d tracks[0-7] 254
+attach dsk0 nzcoma.dsk
+attach dsk1 nzcomb.dsk
+attach dsk2 nzcomc.dsk
+attach dsk3 nzcomd.dsk
+attach dsk4 bdsc160.dsk
+attach dsk5 zsdos.dsk
+attach hdsk0 i.dsk
+attach hdsk1 j.dsk
+set cpu 64k
+set cpu itrap
+set cpu z80
+set cpu altairrom
+set cpu nonbanked
+reset cpu
+set sio ansi
+boot dsk
