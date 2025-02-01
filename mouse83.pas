@@ -452,7 +452,8 @@ PROGRAM MouseInterpreter;
 {Main program}
 
    BEGIN
-      write('enter mouse program name ');
+      writeln('mouse83.pas - 2/1/25'); {lrb}
+      writeln('enter mouse program name '); {lrb}
       read(paramstr); {lrb}
       assign(progfile, paramstr); {lrb}
       load;
