@@ -1,0 +1,14 @@
+
+/* test2.txt - lrb - 2/15/25
+
+test [
+ int i
+ i=4
+ pn i
+ while i<7 [
+  pn i+1
+  i=i+1
+  if (i%2) pl "i is odd" 
+  ]
+]
+
