@@ -1,0 +1,4 @@
+
+this program serves as an introduction to key elements in a tiny-c program.
+
+to be continued ...
