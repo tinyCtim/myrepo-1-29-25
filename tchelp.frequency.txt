@@ -1,0 +1,18 @@
+
+tchelp.frequency.txt
+
+currently, this program reads its own source file and reports the number
+of times each of the 26 lowercase letters occur.
+
+the readfile function takes 3 arguments, the name of the file to be
+read, a character buffer to hold what's read, and the maximum number of
+bytes to read.
+
+the countch function take 3 arguments, the address of character buffer to be
+searched, the address of the last character in the character buffer, and
+the character to be searched for.
+
+an integer array is declared and used to hold the counts. there really
+isn't a need to use an array but it was thought future enhancements
+might be made that would use it (for example, it could be sorted in
+ascending order).

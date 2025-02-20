@@ -1,0 +1,23 @@
+#include pps/library.tc
+#include pps/lrblib.tc
+
+/* Look at some of the other tiny-c programs and then build one yourself. */
+/* For example a program that reads a text file and outputs the frequency */
+/* of each letter used */
+
+/* frequency.tc - 2/19/25 - lrb */
+
+main [
+	pl "";pl "frequency.tc - lrb - 2/19/25";pl "";pl ""
+	char buffer(5000)
+	int bytes
+	int counts(25),letter
+	bytes=readfile "frequency.tc",buffer,5000
+	printf "%d bytes read%c%c",bytes,10,10
+	while (letter<=25) [
+		counts(letter)=countch buffer,buffer+bytes,'a'+letter
+		putchar 'a'+letter;ps " occurred ";pn counts(letter);ps " time(s)";pl ""
+		letter=letter+1
+		]
+	help "frequency"
+]
