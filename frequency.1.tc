@@ -1,16 +1,15 @@
 #include pps/library.tc
 #include pps/lrblib.tc
 
-/* Look at some of the other tiny-c programs and then build one yourself. */
-/* For example a program that reads a text file and outputs the frequency */
-/* of each letter used */
+/* This program reads a text file supplied by the user and outputs the frequency */
+/* of each lowercase letter used. */
 
 /* frequency.tc - 2/19/25 - lrb */
 /* file input and lowercase - 2/20/25 */
 
 main [
 	char file(30)
-	pl "";pl "frequency.tc - lrb - 2/20/25";pl "";pl ""
+	pl "";pl "frequency.1.tc - lrb - 2/21/25";pl "";pl ""
 	pl "file to read? ";gs file
 	char buffer(5000)
 	int bytes
@@ -24,5 +23,4 @@ main [
 		letter=letter+1
 		]
 	help "frequency"
-]
-
+	]
