@@ -9,22 +9,22 @@
 
 What is the length of base of the figure below? The curve at the top is
 a semicircle. The base is the diameter of the circle. The perimeter of
-the figure is assumed to be 135.78 inches. Use 3.14 for pi. Round answer
+the figure is assumed to be 138.78 inches. Use 3.14 for pi. Round answer
 to 4 decimal digits.
 
 <img src=semicircular_figure.jpg>
 
-p = d + (.5)(3.14159)(d) = d(1 + 1.57079) = d(2.57079)
+p = d + (.5)(3.14)(d) = d(1 + 1.570) = d(2.570)
 
-d = p / 2.57079 = 135.78 / 2.57079 = 13578000 / 257079  
+d = p / 2.570 = 138.78 / 2.570 = 13878 / 257
 
 ]
 
 main [
 
 pl "diameter.tc - 2/26/25 - lrb";pl ""
-pn (13578000/257079)
-dpf (13578000%257079,257079,5)
+pn (13878/257)
+dpf (13878%257,257,5)
 
 ]
 
