@@ -11,17 +11,17 @@ the figure is assumed to be 138.78 inches. Use 3.14 for pi.
 
 http://primepuzzle.com/not.just.tiny.c/semicircular_figure.jpg
 
-p = d + (.5)(3.14)(d) = d(1 + 1.570) = d(2.570)
+p = d + (.5)(3.14)(d) = d(1 + 1.57) = d(2.57)
 
-d = p / 2.570 = 138.78 / 2.570 = 13878 / 257
+d = p / 2.57 = 138.78 / 2.57 = 13878 / 257
 
 ]
 
 main [
 
-pl "diameter.tc - 2/26/25 - lrb";pl ""
+pl "diameter.tc - 3/5/25 - lrb";pl ""
 pn (13878/257)
-dpf (13878%257,257,5)
+dpf (13878%257,257,2)
 
 ]
 
