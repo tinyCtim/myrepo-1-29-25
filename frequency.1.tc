@@ -6,15 +6,17 @@
 
 /* frequency.tc - 2/19/25 - lrb */
 /* file input and lowercase - 2/20/25 */
+/* abort if there's an error on the read - 3/7/25 */
 
 main [
 	char file(30)
-	pl "";pl "frequency.1.tc - lrb - 2/21/25";pl "";pl ""
+	pl "";pl "frequency.1.tc - lrb - 3/7/25";pl "";pl ""
 	pl "file to read? ";gs file
-	char buffer(5000)
+	char buffer(65000)
 	int bytes
 	int counts(25),letter
-	bytes=readfile file,buffer,5000
+	bytes=readfile file,buffer,65000
+	if bytes==0 [pl "error on read";abort]
 	tolower(buffer)
 	printf "%d bytes read%c%c",bytes,10,10
 	while (letter<=25) [
