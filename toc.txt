@@ -164,5 +164,6 @@ http://primepuzzle.com/not.just.tiny.c/toc.txt
 150. find_def_test.1.c
 151. alanna3a.tc
 152. cold.tc, cold.tc.jpg
-153.
+153. frequency.1.tc
+154. diameter.tc
 
