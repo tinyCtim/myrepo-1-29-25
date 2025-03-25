@@ -1,0 +1,34 @@
+
+{
+
+Mouse Interpreter, Peter Grogono
+
+Ref: "Mouse:, a language for microcomputers", Petrocelli Books Inc., 1983
+Language: Turbo Pascal, CP/M 80, Implemented: 3/21/86 by Lee Bradley
+
+2/13/88  & command added. Now other .MSE files are invokable.
+
+2/17/88  Removed inline and bdos usage.
+
+7/06/90  Three bugs involving the apostrophe fixed (bracketed sequences, 
+         macros and end of program.) Calculation stack size put at 250. 
+         Recompiled with end address of 7d00, without error messages, under
+         CP/M 2.2. Now runs correctly under Z-System on a Royal.
+
+10/03/90 Added ParamStr function, allowing program to recognize command
+         tail. Z-System dependent now. Broke source up into several
+         include files. Compiled under Z-System with end address of 8800
+         without error messages. Must use alias that pokes Z3ENV address into
+         compiler as per NZ-TOOL.BOX comment.
+
+10/13/90 Added Z3 existence check. Works under CP/M 2.2 again. Disregards
+         any command tail.
+
+
+3/15/07  Increased both envstacksize and maxaddr. Compile w/ end address
+         of a000. Changed date announced by main program to 2007.
+
+3/25/25  Removed Z-System stuff. Compiled w/ Free Pascal.
+
+}
+

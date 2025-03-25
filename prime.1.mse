@@ -1,0 +1,23 @@
+~ prime.mse - lrb - 2/15/2007,3/24/2007,3/25/25
+
+("!Enter a number in the range [2,32757] : "?Q:1Q.<Q.32758<*0=^)
+
+"!Do you want to check "
+"1 this number only or 2 the range [" Q.!","Q.10+!"]!"
+"!? " ?o:"!"
+
+o.1=["!"Q.!" : "#G,Q.,2;]
+o.2=[Q.1-l:Q.10+Q:(Q.l.-^"!"Q.!" : "#G,Q.,2;Q.1-Q:)]
+
+~ find a prime factor of 1% using 2% as the initial candidate
+
+$G 1%n:2%f:
+~ 2 is special; if it's a candidate and not a divisor, start w/ 3
+2%2=[n.2\[3f:]]
+(n.f.\^f.2+f:) ~ f is now the smallest factor of n
+~ next line figures out how often f goes into n
+1c: n.f./d: f.g: (d.f.\0= ^ 1c.+c: d.f./d: g.f.*g:)
+~ print it (possibly with an exponent) followed by a space
+f.!c.1>['^!'c.!]" "
+g.n.<[#G,d.,f.;] ~ call self if not done
+f.Q.=["is prime."]@

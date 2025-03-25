@@ -1,0 +1,40 @@
+
+{ bigger number of local variable spaces - 3/15/2007 }
+
+   CONST
+      maxproglen=16384;      {Maximum length of Mouse program}
+      stacksize=250;         {Maximum depth of calculation stack}
+      envstacksize=230;      {Maximum depth of environment stack}
+      locsize=26;            {Size of local variable space}
+      maxaddr=2860;          {110 local variable spaces}
+      halfwidth=39;          {A number < half screen width}
+      maxbyte=255;           {Small positive integers}
+
+   TYPE
+      progindex=0..maxproglen;
+      tagtype=(macro,parameter,loop);
+      environment=RECORD
+                    tag     :tagtype;
+                    charpos :1..maxproglen;
+                    offset  :0..maxaddr
+                  END; {environment}
+      str1=string[1];
+
+   VAR
+      progfile:text;
+      prog     :ARRAY[1..maxproglen] OF char;
+      stack    :ARRAY[1..stacksize] OF integer;
+      envstack :ARRAY[1..envstacksize] OF environment;
+      data     :ARRAY[0..maxaddr] OF integer;
+      macdefs  :ARRAY['A'..'Z'] OF 0..maxproglen;
+      ch,ch1,pch:char;
+      charpos,proglen:0..maxproglen;
+      sp:0..stacksize;
+      esp,tsp:0..envstacksize;
+      offset,nextfree,temp,temp1:integer;
+      newsource:boolean;
+      tracing,disaster:boolean;
+      parnum,parbal:integer;
+      s:str1;
+      filenamew:string[14];
+

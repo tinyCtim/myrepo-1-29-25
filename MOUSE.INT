@@ -1,0 +1,204 @@
+PROCEDURE interpret;
+   BEGIN
+      charpos:=0;
+      esp:=0;
+      sp:=0;
+      offset:=0;
+      nextfree:=locsize;
+      tracing:=false;
+      REPEAT
+         getchar;
+         IF ch<' ' THEN ch:=' ';  {Convert non-graphic characters to blanks}
+         IF tracing AND (ch<>' ')
+            THEN display(charpos);
+         CASE ch OF
+           ' ':;                  {No action}
+           '$':;                  {No action}
+           '0'..'9':              {Encode a decimal number}
+              BEGIN
+                 temp:=0;
+                 WHILE ch IN ['0'..'9'] DO
+                    BEGIN
+                       temp:=10*temp+value(ch);
+                       getchar
+                    END; {WHILE}
+                 push(temp);
+                 backspace
+              END;
+           '+':push(pop+pop);     {Add}
+           '-':push(-pop+pop);    {Subtract}
+           '*':push(pop*pop);     {Multiply}
+           '/':                   {Divide with zero check}
+              BEGIN
+                 temp:=pop;
+                 IF temp<>0
+                    THEN
+                      BEGIN
+                        temp1:=pop;
+                        IF ((temp1<0) AND (temp>0)) OR
+                           ((temp1>0) AND (temp<0)) THEN
+                           push(-1*abs((temp1 DIV temp)))
+                       ELSE push(temp1 DIV temp)
+                     END
+                 ELSE error(4)
+              END;
+           '\':                   {Remainder with zero check}
+              BEGIN
+                 temp:=pop;
+                 IF temp<>0
+                    THEN
+                      BEGIN
+                        temp1:=pop;
+                        IF ((temp1<0) AND (temp>0)) OR
+                           ((temp1>0) AND (temp<0)) THEN
+                           push(-1*abs((temp1 MOD temp)))
+                       ELSE push(temp1 MOD temp)
+                    END
+                 ELSE error(5)
+              END;
+           '?':                   {Read character or}
+              BEGIN               {number from keyboard}
+                 getchar;
+                 IF ch=''''
+                    THEN
+                       BEGIN
+                          read(ch1);
+                          push(ord(ch1))
+                       END
+                    ELSE
+                       BEGIN
+                          read(temp);
+                          push(temp);
+                          backspace
+                       END
+              END;
+           '!':                   {Display character}
+               BEGIN              {or number on screen}
+                  getchar;
+                  IF ch=''''
+                     THEN
+                        BEGIN
+                           ch1:=chr(pop);
+                           write(ch1)
+                        END
+                     ELSE
+                        BEGIN
+                           write(pop);
+                           backspace
+                        END
+               END;
+           '"':                   {Display string on screen}
+               REPEAT
+                  getchar;
+                  IF ch='!'
+                    THEN writeln
+                  ELSE IF ch<>'"'
+                    THEN write(ch)
+               UNTIL ch='"';
+           'A'..'Z':push(ord(ch)-ord('A'));         {Globals}
+           'a'..'z':push(ord(ch)-ord('a')+offset);  {Locals}
+           ':':data[pop]:=pop;    {Assignment}
+           '.':push(data[pop]);   {Dereference}
+           '<':push(ord(pop>pop));
+           '=':push(ord(pop=pop));
+           '>':push(ord(pop<pop));
+           '[':IF pop<=0          {Conditional statement}
+                 THEN skip('[',']');
+           ']':;                  {No action}
+           '(':pushenv(loop);     {Begin loop}
+           ')':                   {End loop}
+               charpos:=envstack[esp].charpos;
+           '^': IF pop<=0         {Exit loop}
+                  THEN
+                     BEGIN
+                        popenv;
+                        skip('(',')')
+                     END;
+           '#':                   {Macro call}
+              BEGIN
+                 getchar; ch:=upcase(ch);
+                 IF ch IN ['A'..'Z']
+                    THEN
+                       IF macdefs[ch]>0
+                          THEN
+                             BEGIN
+                                pushenv(macro);
+                                charpos:=macdefs[ch];
+                                IF nextfree+locsize<=maxaddr
+                                   THEN
+                                      BEGIN
+                                         offset:=nextfree;
+                                         nextfree:=nextfree+locsize
+                                      END
+                                   ELSE error(10)
+                                END
+                             ELSE error(6)
+                          ELSE error(7)
+                       END;
+           '@':                   {Return from macro}
+              BEGIN
+                 popenv;
+                 skip('#',';');
+                 nextfree:=nextfree-locsize
+              END;
+           '%':                   {Replace formal by actual}
+              BEGIN
+                 pushenv(parameter);
+                 parbal:=1;
+                 tsp:=esp;
+                 REPEAT
+                    tsp:=tsp-1;  {Search in stack...}
+                    CASE envstack[tsp].tag OF
+                       macro: parbal:=parbal-1;
+                       parameter: parbal:=parbal+1;
+                       loop:
+                    END {CASE}
+                 UNTIL parbal=0; {...for call environment}
+                 charpos:=envstack[tsp].charpos;
+                 offset:=envstack[tsp].offset;
+                 parnum:=pop;   {Get parameter number}
+                 REPEAT
+                    getchar;
+                    IF ch='"'
+                       THEN skipstring
+                    ELSE IF ch = '#'
+                       THEN skip('#',';')
+                    ELSE IF ch = ','
+                       THEN parnum:=parnum-1
+                    ELSE IF ch = ';'
+                       THEN
+                          BEGIN
+                             parnum:=0;
+                             popenv      {Null parameter}
+                          END
+                       UNTIL parnum=0
+                    END;
+           ',',                          {End of actual parameter}
+           ';': popenv;                  {End of macro call}
+           '''':                         {Stack next character}
+              BEGIN
+                 getchar;
+                 push(ord(ch));
+                 ch:=''''
+              END;
+          '{': tracing:=true;
+          '}': tracing:=false;
+          '&': 
+              BEGIN                     
+                  newsource:=true;
+                  getchar;                                              
+                  filenamew:='';
+                  WHILE (ch <> '&') DO
+                      BEGIN     
+                          filenamew:=filenamew+UpCase(ch);
+                          getchar
+                      END;   
+                  filenamew:=filenamew+Copy('.MSE',1,4);        
+                  load; 
+                  ch:='$';  
+              END;   
+           ELSE error(11);
+        END {CASE}
+      UNTIL (ch='$') OR disaster
+   END; {interpret}
+
