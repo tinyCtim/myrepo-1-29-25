@@ -3,7 +3,7 @@ http://primepuzzle.com/not.just.tiny.c/toc.txt
 
 0. testpospi.tc, pospi.c, testpos.tc
 1. What characterizes a well-written computer program.txt
-2. A Programmers Guide to the Meaning of Life
+2. A Programmer's Guide to the Meaning of Life
 3. Table_Of_Contents.html
 4. library.tc, mathLib.tc, lineLib.tc, lrblib.tc, pyGraphicsLib.tc
 5. buildplugin.bat, buildplugin.sh
@@ -97,7 +97,8 @@ http://primepuzzle.com/not.just.tiny.c/toc.txt
 88. CHICKEN.PAS
 89. CPMDIR.PAS
 90. TCAP24.BAS
-91. ASCII.MSE, Z80.MSE, z80.mp4
+91. ASCII.MSE, Z80.MSE, z80.mp4, MOUSE.PAS, MOUSE.INT, MOUSE.HIS,
+MOUSE.DEF, mouse.exe, EXP.MSE, prime.1.mse, SELFGEN.MSE
 92. RYEMASH.BAS, ryemash.txt, fortran_coloring_book.html
 93. millipede.html, millie.c, millie.tc, millipede_millie.txt, chomsky.htm
 94. pentence.tc.jslinux.txt, pentence.tc.jslinux.txt.out, pentence.1.py
@@ -151,7 +152,7 @@ http://primepuzzle.com/not.just.tiny.c/toc.txt
 137. monster.c
 138. dots.py
 139. dBase II menus
-140. PI314.BAS, pi.py, pi_approx.c
+140. PI314.BAS, pi.py, pi_approx.c, pi.c
 141. hash.9.30.24.tc, hashin.0.txt, hashin.1.txt, hashin.3.txt, hashin.4.txt, match.py
 142. never_ending.py
 143. sept.c, foo.def, foo.enc, foo.dec
