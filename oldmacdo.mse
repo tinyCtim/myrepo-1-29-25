@@ -2,6 +2,7 @@
 ~ MacDonald's Farm - pg - 7/8/84
 
 ~ lrb - 9/17/14 - Added snakes. Other cosmetic mod's.
+~ 4/1/25 - slowed down
 
 ("!!How many verses ? " ? n : n . 7 > [7 n :] n . 0 > ^ #S,1,n .;)
 
@@ -9,10 +10,10 @@ $S "!" #V,0; ",!And on this farm he had some "
  #W,1%; #R; ", !With a " #V,1%; ".!" #X;
  1% 2% < [#S,1% 1 +,2%;] @
 
-$V 1% 0 = ["Old MacDonald had a farm" #R; @]
+$V 1% 0 = [#X;"Old MacDonald had a farm" #R; @]
  #A,#M,1%;,#N,1%;; "!" #V,1% 1 -; @
 
-$X 2 y : (y . ^ 32767 x : (x . ^ x . 1 - x :) y . 1 - y :) @
+$X 400 y : (y . ^ 32767 x : (x . ^ x . 1 - x :) y . 1 - y :) @
 
 $A #C,1%,2%; "!" #B,"H",1%; #B," th",2%; #B," everywh",1% " " 2%; @
 
