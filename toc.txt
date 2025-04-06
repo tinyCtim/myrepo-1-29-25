@@ -98,7 +98,7 @@ http://primepuzzle.com/not.just.tiny.c/toc.txt
 89. CPMDIR.PAS
 90. TCAP24.BAS
 91. ASCII.MSE, Z80.MSE, z80.mp4, MOUSE.PAS, MOUSE.INT, MOUSE.HIS,
-MOUSE.DEF, mouse.exe, EXP.MSE, prime.1.mse, SELFGEN.MSE, oldmacdo.mse
+MOUSE.DEF, mouse.exe, EXP.MSE, prime.1.mse, SELFGEN.MSE, oldmacdo8.mse
 92. RYEMASH.BAS, ryemash.txt, fortran_coloring_book.html
 93. millipede.html, millie.c, millie.tc, millipede_millie.txt, chomsky.htm
 94. pentence.tc.jslinux.txt, pentence.tc.jslinux.txt.out, pentence.1.py
