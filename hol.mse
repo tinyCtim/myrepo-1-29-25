@@ -1,0 +1,24 @@
+~ hol.mse - ask user for birth month; give them a holiday in that month - lrb - 3/17/2006
+~ 3/16/2007 - got rid of use of &aug& feature (which is non-standard Mouse)
+"What's your birth month?!"
+"(Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec) : "
+?' a: ?' b: ?' c: "!"
+#L,a; #L,b; #L,c;
+#H,a.,b.,c.;
+$H ~ display holiday that's in 1%2%3%
+3%2%1%'j=['a=['n=["Martin Luther King Jr. Day" @]]] 
+3%2%1%'f=['e=['b=["Ground Hog's Day" @]]]           
+3%2%1%'m=['a=['r=["Saint Patrick's Day" @]]]        
+3%2%1%'a=['p=['r=["Good Friday" @]]]                
+3%2%1%'m=['a=['y=["Cinco de mayo" @]]]              
+3%2%1%'j=['u=['n=["Father's Day" @]]]               
+3%2%1%'j=['u=['l=["Independence Day" @]]]           
+3%2%1%'a=['u=['g=["National Watermelon Day" @]]]
+3%2%1%'s=['e=['p=["Labor Day" @]]]                  
+3%2%1%'o=['c=['t=["Halloween" @]]]                  
+3%2%1%'n=['o=['v=["Thanksgiving Day" @]]]           
+3%2%1%'d=['e=['c=["Hanukah" @]]]                    
+"Month not recognized" '!!' @
+$L ~ lower-case what's at 1%
+'a 1%.>[1%. 32+ 1%:] @ 
+
