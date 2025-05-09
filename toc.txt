@@ -168,3 +168,4 @@ MOUSE.DEF, mouse.exe, EXP.MSE, prime.1.mse, SELFGEN.MSE, oldmacdo8.mse
 153. frequency.1.tc
 154. diameter.tc
 155. frombintoascii.try.c, fromasciitobin.try.c
+156. namegame.html
