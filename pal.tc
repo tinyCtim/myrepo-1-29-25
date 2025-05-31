@@ -2,7 +2,7 @@
 [
 https://www.facebook.com/MITnews/photos/today-5-29-25-marks-the-last-in-a-string-of-palindrome-dates-that-began-on-may-2/1149581997213935/?_rdr
 
-usage: tc pal.tc -r pal\"string\"
+usage: tc pal.tc -r "pal\"string\""
 ]
 
 pal char s(0) [
