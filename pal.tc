@@ -1,0 +1,17 @@
+
+[
+https://www.facebook.com/MITnews/photos/today-5-29-25-marks-the-last-in-a-string-of-palindrome-dates-that-began-on-may-2/1149581997213935/?_rdr
+
+usage: tc pal.tc -r "pal\"string\""
+]
+
+pal char s(0) [
+ int i,g
+ g=strlen(s)
+ while i<g/2 [
+  if (s(i)!=s(g-1-i)) [pn 0;abort]
+  i=i+1
+  ]
+  pn 1 
+ ]
+
