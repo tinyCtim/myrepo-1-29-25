@@ -170,5 +170,5 @@ MOUSE.DEF, mouse.exe, EXP.MSE, prime.1.mse, SELFGEN.MSE, oldmacdo8.mse
 155. frombintoascii.try.c, fromasciitobin.try.c
 156. namegame.html
 157. x_cube.py, x_cube.png
-158. pal.tc, pal.png, pal.pl, pal1.pl, pal2.pl
+158. pal.tc, pal.png, pal.c, pal.pl, pal1.pl, pal2.pl, pal2.py
 
