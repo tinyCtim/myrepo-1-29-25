@@ -40,7 +40,7 @@ int main(int argc, char *argv[]) {
         token = strtok(NULL, ".!?");
     }
 
-    printf("Total number of sentences: %d\n\n", sentence_count);
+    printf("Total number of sentences: %d\n\n", sentence_count - 1);
 
     for (int i = 0; i < sentence_count; i++) {
         int letters = 0, words = 0, length = 0;
