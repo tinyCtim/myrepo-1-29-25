@@ -9,7 +9,7 @@
 # After the process is completed with the 1000th student how many lockers
 # are open?
 
-locker() {
+locker(){
  int n;
  printf("%center the number of lockers (up to 1000): ",10);
  char nums[6];
@@ -19,9 +19,9 @@ locker() {
  # locker array, index, locker number, total
  int la[1000],i,ln,tot;
  ln=1;
- while(ln<=n) {
+ while(ln<=n){
   i=ln;
-  while(i<=n) {
+  while(i<=n){
    la[i]=1-la[i]; # toggle locker state
    i=i+ln;
    }
@@ -29,7 +29,7 @@ locker() {
   }
  i=1;
  while(i<=n){
-  if(la[i]==1) { # if open, display and tally
+  if(la[i]==1){ # if open, display and tally
    printf("%d ",i);
    tot=tot+1;
    }
@@ -38,4 +38,3 @@ locker() {
  printf("%c%c%d",10,10,tot);
  puts(" lockers are open.");
  }
-
