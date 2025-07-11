@@ -1,6 +1,6 @@
 
 # A high school has a new principal. On his first day he had his students
-# perform an opening day ceremony. There are 1000 lockeers and 1000
+# perform an opening day ceremony. There are 1000 lockers and 1000
 # students in the school. The principal asks the first student to go to
 # every locker and open it. Then he asks the second student to go to every
 # second locker (even #) and close it. He has the third student go to
