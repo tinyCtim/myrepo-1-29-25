@@ -6,7 +6,7 @@
 # second locker (even #) and close it. He has the third student go to
 # every third locker and open it if it's closed and close it if it's open.
 # He has the fourth student do this to every fourth locker and so on.
-# After the process is completed with the 100th student how many lockers
+# After the process is completed with the 1000th student how many lockers
 # are open?
 
 locker() {
