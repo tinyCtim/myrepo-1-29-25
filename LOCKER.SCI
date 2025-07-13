@@ -38,3 +38,4 @@ locker(){
  printf("%c%c%d",10,10,tot);
  puts(" lockers are open.");
  }
+
