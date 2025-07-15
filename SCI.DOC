@@ -463,7 +463,7 @@ THE_SYS_FUNCTIONS
                        linenum - the line number to start editing.
                        program - the tokenized program buffer.
 
-  16     (strcmp) - comparse two strings for equality.
+  16     (strcmp) - compare two strings for equality.
                     RETURNS: 0 if the strings match, non-zero if not.
 
                     sys(str1,str2,count,16)
