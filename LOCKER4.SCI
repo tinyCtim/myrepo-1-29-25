@@ -14,10 +14,9 @@
 locker(n,s) int n;char *s;
 {
  printf("\nUsage: locker(n,string)\n");
- printf("%clocker4.sci - 7/15/25 - lrb%c",10,10);
+ printf("%clocker4.sci - 7/13/25 - lrb%c",10,10);
  # locker array, index, locker number, total
  printf("\n%s\n\n",s);
- if(!strncmp(s,"help",4))printf("\nload and run help.sci\n");
  int la[1000],i,ln,tot;
  ln=1;
  while(ln<=n){
