@@ -163,7 +163,7 @@ MOUSE.DEF, mouse.exe, EXP.MSE, prime.1.mse, SELFGEN.MSE, oldmacdo8.mse
 148. dir.txt
 149. index.try.3.c
 150. find_def_test.1.c
-151. alanna3a.tc
+151. alanna3a.tc, LOCKER3.SCI.TXT
 152. cold.tc, cold.tc.jpg
 153. frequency.1.tc
 154. diameter.tc

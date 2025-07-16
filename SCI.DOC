@@ -235,7 +235,7 @@ THE_EDITOR
 
 LANGUAGE_ELEMENTS
 
-   Althgough SCI implements only a subset of the "C" language, it is
+   Although SCI implements only a subset of the "C" language, it is
  powerful enough to teach you the major principles of "C". We're going
  to cop out now and refer you to a higher authority for a sound
  introduction to "C", but we will list here the major features of the
@@ -463,7 +463,7 @@ THE_SYS_FUNCTIONS
                        linenum - the line number to start editing.
                        program - the tokenized program buffer.
 
-  16     (strcmp) - comparse two strings for equality.
+  16     (strcmp) - compare two strings for equality.
                     RETURNS: 0 if the strings match, non-zero if not.
 
                     sys(str1,str2,count,16)
@@ -566,7 +566,7 @@ PROGRAM_TRACE
 PASSING_ARGUMENTS_TO_THE_SHELL
 
    A mechanism has been provided to pass CP/M command line arguments to
- the command shell in a way similar to most commerically available "C"
+ the command shell in a way similar to most commercially available "C"
  compilers.  When you start up SCI from CP/M, a "-A" will cause all
  following arguments to be passed to the command shell.  For example,
  suppose the following program to be the command shell:
