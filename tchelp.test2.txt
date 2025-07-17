@@ -3,14 +3,18 @@ This program serves as an introduction to key elements in Tiny-C
 programs.
 
 The #include lines are needed to make functions used by the program
-known.
-
-The various ways to comment in Tiny-C are illustrated ( /* and [ ] ).
+known. You don't need to have them if all functions used are in
+pps/library.tc (this library will automatically be included in this
+case). The help function is defined in pps/lrblib.tc.
+ 
+Two of the ways to comment in Tiny-C are illustrated ( /* and [ ] ).
+Another way is to use //.
 
 Tiny-C programs are a sequence of function definitions. Here we have
 only one function definition, test. It takes no arguments. When
 arguments are used, they are listed after the name of the function along
-with their type.
+with their type. For example, if test had two arguments, an int and a
+char, we would code it test int foo;char bar [.
 
 There is only one variable, i. Semicolons may be used to have multiple
 statements on one line. Variables must be declared (i is an integer
@@ -20,10 +24,10 @@ are initialized to 0 (or null if it's a character variable.)
 How to launch this program is shown. You need to use the -r option (run)
 because there is no main function, the default.
 
-All standard flow control statements (if, else, while) are illustrated.
-Notice the use of parentheses to specify the condition. Tiny-C is less
-strict than C on parentheses. In most cases they are not needed in if
-and while statements.
+The flow control statements if, else, and while are illustrated. break
+is also supported but not used. Notice the use of parentheses to specify
+the condition. Tiny-C is less strict than C on parentheses. In most
+cases they are not needed in if and while statements.
 
 The pn (print number) function (which is one of the functions in
 pps/library.tc) is used. printf could have been used but no formatting
@@ -31,10 +35,8 @@ is needed so the simpler function is used. Notice the use of %c in the
 lines that do use printf (\n, newline, is not supported). Notice
 parentheses are not used in the printf statements (but could have been).
 
-The help function is defined in pps/lrblib.tc.
-
-Notice the use of brackets ( [ and ] ) in function definitions. C uses
-braces ( { and } ).
+Notice the use of brackets ( [ and ] ) in function definitions and to
+define blocks of statements. C uses braces ( { and } ).
 
 Tiny-C uses parentheses instead of brackets in array declarations. No
 arrays are used in this example.
