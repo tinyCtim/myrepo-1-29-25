@@ -1,0 +1,118 @@
+
+<html>
+
+<!-- 246-notes.html - 3/24/2006, 4/2,3/2006, 1/4/2013, 12/16/2024 - lrb -->
+
+<head><title>246 Notes</title></head>
+
+<body>
+
+<table width="87%" align="center"><tr><td>
+
+<b>
+
+<hr>
+
+<p>
+
+<hr>
+
+The original puzzle came from National Public Radio's Sunday Puzzle
+hosted by <a href="http://www.npr.org/templates/story/story.php?storyId=2101852">Will Shortz </a>.
+
+<p>
+
+<hr>
+
+<pre>
+Challenge from Jan. 1: From Ed Pegg, Jr., who runs the Web site <a href="http://mathpuzzle.com">Mathpuzzle.com</a>:
+
+The numbers 2, 4, 6, and 30, are the first four numbers whose names lack
+the letter "E". What is the 23rd number whose name lacks an "E"?
+
+Answer: 2006.
+
+Winner: Mitch Berman of Witchita, Kansas.
+
+<a href="http://www.npr.org/templates/story/story.php?storyId=5134836">click to see NPR story</a>
+</pre>
+
+<hr>
+
+<p>
+
+See also
+
+<p>
+
+<a href="http://oeis.org/A006933">http://oeis.org/A006933</a>
+
+<p>
+
+to learn about "Eban" numbers (the letter "e" is banned!) from the
+On-Line Encyclopedia of Integer Sequences (OEIS).
+
+<p>
+
+<hr>
+
+I learned about all this from my friend Howard Goldstein.
+
+<p>
+
+The way I programmed this hinges on the fact that you can put error
+handlers on servers to trap specific errors. A file named .htaccess is
+used to define the page to run for a specific error. In this case, the
+file not found (code 404) error is handled by the page 2461.html which
+simply tells the user his entry did not qualify and provides a link back
+to the original form.
+
+<p>
+
+Here's what's in the .htaccess file:
+
+<p>
+
+ErrorDocument 404 http://www.primepuzzle.com/246/2461.html
+
+<p>
+
+The main program, 246.html, has a form on it which has an input text box
+named "foobar." When the user presses the Enter key the value entered in
+this box is passed as a parameter back to 246.html which has parameter
+detecting JavaScript code which issues the command
+
+<p>
+
+location='246'+foobar+'.html';
+
+<p>
+
+where foobar is the value of the number entered by the user.
+
+<p>
+
+This means, for example, that the page 2462030.html gets launched if the
+user put 2030 in the form.
+
+<p>
+
+There are 31 pages on the server in the 246 directory. All but 4 of them
+are .html files. The 4 odd balls are a .js file which is part of the
+command tail parameter logic, the .htaccess error handler file, a .wav
+file that's played when the user gets the answer and a .jpg that appears
+on the same answer page, 2462006.html. That leaves 27 .html files. This
+is one of them. 26 = 23 correct answers + 1 to handle the "answer" 2030
++ 1 to handle the main program that asks for a guess (246.html) + the
+file 2461.html discussed above.
+
+<p>
+
+<a href="http://primepuzzle.com/246/246-notes.html">http://primepuzzle.com/246/246-notes.html</a>
+
+</td></tr></table>
+
+</body>
+
+</html>
+
