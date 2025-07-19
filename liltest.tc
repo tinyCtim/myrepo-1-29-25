@@ -1,0 +1,13 @@
+#include lillib.tc
+ps char b(0)[//print a string
+MC"%s",b,101]
+crlf[//print a carriage return line feed
+MC(13,1);MC(10,1)]
+foo [
+crlf;crlf;ps"Hit a key ..."
+crlf
+MC(2)//get a character
+MC(8,1)//print a backspace
+MC(' ',1)//print a space
+]
+
