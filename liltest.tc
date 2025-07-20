@@ -1,0 +1,10 @@
+#include lillib.tc
+foo [
+MC 10,1
+MC 10,1
+MC "Strike Any Key ...",101
+MC 2 // get a character
+MC 8,1 // print a backspace
+MC ' ',1// print a space
+]
+

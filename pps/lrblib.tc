@@ -14,6 +14,17 @@ color char c [
  MC '\'-'A',1;MC '\'-1,1;MC '3',1;MC c,1;MC 'm',1
  ]
 
+pos int rc [
+ if(rc>9) [MC rc/10+48,1;rc=rc%10]
+ MC rc+48,1
+ ]
+
+posc int r,c [
+ int R,C;R=25;C=80
+ if((r>=1)*(r<=R)*(c>=1)*(c<=C)==0)return 1
+ MC '\'-'A',1;MC '\'-1,1;pos r;MC ';',1;pos c;MC 'H',1;return 0
+ ]
+
 hilo char c [
  MC '\'-'A',1;MC '\'-1,1;MC c,1;MC 'm',1
  ]
@@ -35,6 +46,7 @@ sak [
  printf "%cStrike any key ... ",10
  char ch
  ch=getchar()
+ MC(8,1);MC(' ',1)
  return(ch);
  ]
 
@@ -63,7 +75,7 @@ help char h(0) [
  ]
 
 lrblibver [
- printf "%clrblib version 6/26/21%c",10,10
+ printf "%clrblib version 1.14%c",10,10
  ]
 
 url int n; char u(0) [ // returns pointer to url string
