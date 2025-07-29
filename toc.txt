@@ -58,7 +58,7 @@ http://primepuzzle.com/not.just.tiny.c/toc.txt
 49a. mandel.tc, mandel.area.tc, mandel.jpg, mandel.mp4, fractals_no_oo_v3.py,
     MANDEL42.BAS MANDEL32.DOC, DOSPrinter.exe, benoit.html
 49b. simple_plotter.py, simple_plotter.jpg
-50. factor.6.2.tc, factor_doc.htm
+50. factor.6.2.tc, factor_doc.htm, factor.c, factor_7_28_25.tc
 51. http://primepuzzle.com/dancing/ipl.try.htm
 52. https://scratch.mit.edu/projects/2886014/
 53. paper.puzzle.reader.htm
@@ -163,7 +163,7 @@ MOUSE.DEF, mouse.exe, EXP.MSE, prime.1.mse, SELFGEN.MSE, oldmacdo8.mse
 148. dir.txt
 149. index.try.3.c
 150. find_def_test.1.c
-151. alanna3a.tc, LOCKER3.SCI.TXT
+151. alanna3a.tc, LOCKER3.SCI.TXT, locker.tc
 152. cold.tc, cold.tc.jpg
 153. frequency.1.tc
 154. diameter.tc
