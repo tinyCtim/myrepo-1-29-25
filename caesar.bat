@@ -7,7 +7,9 @@ IF "%1" NEQ "" (
  type %TEMP%
  echo.
  caesar03 %TEMP% -d
- )
-del %TEMP%
+ del %TEMP%
+ ) ELSE (
+ echo Usage caesar.bat filename
+)
 echo.
 
