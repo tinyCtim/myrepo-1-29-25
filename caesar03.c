@@ -16,7 +16,7 @@ the alphabet 13 characters back.
 8/3/25 - lrb - caesar02.c
 
 This version implements the cipher described in Louise Penny's book The
-Brutel Telling
+Brutal Telling
  
 ABCDEFGHIJKLMNOPQRSTUVWXYZ
 KLMNOPQRSTUVWXYZABCDEFGHIJ
