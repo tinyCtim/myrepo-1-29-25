@@ -109,7 +109,7 @@ MOUSE.DEF, mouse.exe, EXP.MSE, prime.1.mse, SELFGEN.MSE, oldmacdo8.mse
 99. pangram.4.1.tc, https://ideone.com/roz1Wc, pangram.5.tc, pangram.pl
 100. Cryptarithms (http://www.cryptarithms.com/), math.c, laz.c
 101. despooner.1.tc
-102. caesar01.c 
+102. caesar04.c
 103. greet05.c, .bash_profile, pithy05.c, pithy.txt
 104. dandy.html, dandelion.4.16.22.c, dandelion.1.c
 105. june.22.c, june.22.data.c june.22b.c, june.22c.c
@@ -172,3 +172,4 @@ MOUSE.DEF, mouse.exe, EXP.MSE, prime.1.mse, SELFGEN.MSE, oldmacdo8.mse
 157. x_cube.py, x_cube.png, fourier.c
 158. pal.tc, pal.png, pal.c, pal.pl, pal1.pl, pal2.pl, pal2.py
 159. king_kong_new_try.c, http://primepuzzle.com/not.just.tiny.c/fox_529.txt
+160. nato05_try.c, nato05_try.exe, nato05_try
