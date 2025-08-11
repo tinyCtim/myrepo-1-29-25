@@ -55,7 +55,9 @@ int main(argc,argv) int argc;char *argv[];
 
     int i=0;
     int shift = 10;
-    if (strcmp(argv[3], "-s") == 0) shift = atoi(argv[4]);
+    if (argc == 5) {
+        if (strcmp(argv[3], "-s") == 0) shift = atoi(argv[4]);
+        }
 
     while( i != items_read )
     {
