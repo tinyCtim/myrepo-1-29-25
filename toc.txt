@@ -77,7 +77,7 @@ http://primepuzzle.com/not.just.tiny.c/toc.txt
     at 4way.mp4
 71. chutes_and_ladders.html
 72. ferry_solution.html, ferry video
-73. morse.tc, demorse.tc, morse.py, morse.to.letters.qr.2.htm
+73. morse.tc, demorse.tc, morse.py, morse.to.letters.qr.2.htm, http://primepuzzle.com/not.just.tiny.c/haiku.html
 74. url.tc, urldownloadpi.c, urldownload.c, liburldownload.so
 75. connect_the_dots.py
 76. Three quines SELFGEN.BAS, SELFGEN.MSE, selfgen.py
