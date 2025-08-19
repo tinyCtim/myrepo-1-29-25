@@ -1,0 +1,79 @@
+
+<html>
+
+<!--
+revised from LBrad Factoids ~ 11/26/08 - lrb
+-->
+
+<head>
+
+<meta http-equiv="refresh" content="7";url=60.htm">
+
+<title>LynnZ Factoids</title>
+
+<script>
+
+var f = new Array();
+
+f[0] = '';
+f[0] += 'LynnZ\'s age is the sum of "twin primes."<br>';
+f[0] += '29 + 31 = her age.';
+
+f[1] = ''
+f[1] += 'LynnZ\'s "abundant."<br>';
+f[1] += 'The sum of the divisors of her age is greater than';
+f[1] += ' twice her age. <br>';
+f[1] += '1 + 2 + 3 + 4 + 5 + 6 + 10 + 12 + 15 + 20 + 30 + 60 = 168.<br>';
+f[1] += '168 - (2 * her age) = 48. Her "abundance" is 48.';
+
+f[2] = '';
+f[2] += 'LynnZ\'s name has a prime';
+f[2] += ' number of letters.';
+
+f[3] = '';
+f[3] += 'LynnZ\'s age is "highly composite."<br>';
+f[3] += '(i.e. about as non-prime as you can get) <br>';
+f[3] += 'Proof: Her age has more divisors than any positive';
+f[3] += ' integer less than her<br>';
+f[3] += ' age (it has 12 divisors; please refer to factoid #3).';
+
+f[4] = '';
+f[4] += 'LynnZ\'s (unitary) <font color=red>perfect</font>.<br>';
+f[4] += 'Proof: The sum of the (unitary) divisors of her age<br>';
+f[4] += '1 + 3 + 4 + 5 + 12 + 15 + 20 = her age. <br>';
+f[4] += '(2, 6, 10, 30 and 60 aren\'t "unitary" divisors because, <br>';
+f[4] += 'for example, 60 / 6 = 10 has a common factor with 60).';
+
+f[5] = '';
+f[5] += 'LynnZ\'s inter-factoid display delay (in seconds) is';
+f[5] += ' prime.<br>';
+f[5] += 'Wait 7 seconds and you\'11 see a new factoid.';
+
+f[6] = '';
+f[6] += 'LynnZ\'s nickname (that would be "LynnZ") has a prime';
+f[6] += ' number of letters.';
+
+pa = [2,3,5,7,11,13,17]
+
+ri = Math.floor(pa.length*Math.random())
+
+</script>
+
+</head>
+
+<body>
+
+<table align="center" width="79%"><tbody><tr><td align="center">
+
+<br><b><a href="http://primepuzzle.com/not.just.tiny.c/60.htm"><font size="+3">LynnZ Factoids</font></a>
+</b><p><b><img src="balloon.jpg"></b></p><p>
+
+<script>
+document.write('#'+pa[ri]+'<p>'+f[ri]+'</b>');
+</script>
+
+</p></td></tr></tbody></table>
+
+</body>
+
+</html>
