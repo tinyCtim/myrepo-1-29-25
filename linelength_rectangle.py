@@ -1,9 +1,6 @@
 import cv2
 import numpy as np
 
-# Aaron West / AI
-# turned on debugging prints, fixed use of range function - lrb - 8/27/25
-
 # https://gist.github.com/tallpeak/ca0f76d0334cc6509aeca113c84905b6?fbclid=IwY2xjawMagk9leHRuA2FlbQIxMABicmlkETE3dTJWd1k4YlBscmlMRlJ0AR4yGs6qBtgwud_dbPBsYNA2ux4dCWhc4ycGHhK1u909NXl6puy9cfglFayBkw_aem_8cWqRr3oLEH0ELG17mFQ4A
 
 # --- 1. Define the physical dimensions of the image ---
@@ -51,7 +48,7 @@ def calculate_line_length(image_path, physical_width_in, physical_height_in):
         line_contour = max(contours, key=cv2.contourArea)
 
         tot_length = 0
-        for i in range(len(line_contour)):  # lrb
+        for i in range(1, len(line_contour)):
             segment_length = np.linalg.norm(line_contour[i] - line_contour[i - 1])
             tot_length += segment_length
             print(f"Segment {i}: Length = {segment_length:.2f}, Total Length = {tot_length:.2f}")
