@@ -27,7 +27,7 @@ def calculate_line_length(image_path, physical_width_in, physical_height_in):
         # Get image dimensions in pixels
         h_px, w_px = img.shape[:2]
 
-        # print(f"height {h_px:.2f}, width {w_px:.2f}")
+        print(f"height {h_px:.2f}, width {w_px:.2f}")
 
         # Convert to grayscale for simpler processing
         gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -110,4 +110,4 @@ line_length = calculate_line_length(
 
 if line_length > 0:
     print(f"The calculated length of the line is: {line_length:.2f} inches")
-	
+
