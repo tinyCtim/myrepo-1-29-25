@@ -173,3 +173,5 @@ MOUSE.DEF, mouse.exe, EXP.MSE, prime.1.mse, SELFGEN.MSE, oldmacdo8.mse
 158. pal.tc, pal.png, pal.c, pal.pl, pal1.pl, pal2.pl, pal2.py
 159. king_kong_new_try.c, http://primepuzzle.com/not.just.tiny.c/fox_529.txt
 160. nato05_try.c, nato05_try.exe, nato05_try
+161. 60.htm
+162. length16.py
