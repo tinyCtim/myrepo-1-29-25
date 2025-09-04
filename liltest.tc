@@ -1,13 +1,14 @@
 #include lillib.tc
-foo [
-MC 10,1
-MC 10,1
-MC "Strike Any Key ...",101
-char ch
-ch=MC 2 // get a character
-if(ch!=13)[
- MC 8,1 // print a backspace
- MC ' ',1 // print a space
+// liltest.tc - lrb - 9/4/25
+// to run, tc liltest.tc -r foo -q -l
+foo [ // test of Strike Any Key ...
+ MC 10,1
+ MC 10,1
+ MC "Strike Any Key ...",101
+ char ch
+ ch = MC 2 // get a character
+ if (ch != 13) [
+  MC 8,1 // print a backspace
+  MC ' ',1 // print a space
+  ]
  ]
-]
-
